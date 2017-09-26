@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateDbCommentsTable extends Migration {
+class CreateDayCommentsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateDbCommentsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('db_comments', function(Blueprint $table)
+		Schema::create('day_comments', function(Blueprint $table)
 		{
-			$table->integer('count', true);
+			$table->integer('count')->unique('count_UNIQUE');
 			$table->string('id', 36)->unique('id_UNIQUE');
 			$table->timestamps();
 			$table->softDeletes();
@@ -33,7 +33,7 @@ class CreateDbCommentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('db_comments');
+		Schema::drop('day_comments');
 	}
 
 }

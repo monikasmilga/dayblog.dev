@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateDbPostsTable extends Migration {
+class CreateDayPostsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateDbPostsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('db_posts', function(Blueprint $table)
+		Schema::create('day_posts', function(Blueprint $table)
 		{
-			$table->integer('count', true);
+			$table->integer('count')->unique('count_UNIQUE');
 			$table->string('id', 36)->unique('id_UNIQUE');
 			$table->timestamps();
 			$table->softDeletes();
@@ -38,7 +38,7 @@ class CreateDbPostsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('db_posts');
+		Schema::drop('day_posts');
 	}
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class AddForeignKeysToDbPostsTable extends Migration {
+class AddForeignKeysToDayPostsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class AddForeignKeysToDbPostsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('db_posts', function(Blueprint $table)
+		Schema::table('day_posts', function(Blueprint $table)
 		{
-			$table->foreign('user_id', 'fk_db_posts_db_users')->references('id')->on('db_users')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('user_id', 'fk_db_posts_db_users')->references('id')->on('day_users')->onUpdate('NO ACTION')->onDelete('NO ACTION');
 		});
 	}
 
@@ -26,7 +26,7 @@ class AddForeignKeysToDbPostsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('db_posts', function(Blueprint $table)
+		Schema::table('day_posts', function(Blueprint $table)
 		{
 			$table->dropForeign('fk_db_posts_db_users');
 		});
