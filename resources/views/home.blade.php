@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    <img src="images/1506512743.jpg">
+
                 </div>
             </div>
         </div>

@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <a class="navbar-brand" href="{{ route ('app.users.index') }}">
+                        <a class="navbar-brand" href="{{ route ('app.posts.create') }}">
                             Add post
                         </a>
                     </ul>

@@ -12,7 +12,7 @@ class DBUsersController extends Controller {
 	 */
 	public function index()
 	{
-        return view('user.post-form');
+//        return view('user.post-form');
 	}
 
 	/**

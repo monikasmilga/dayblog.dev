@@ -21,7 +21,7 @@ class DBUsers extends Authenticatable
         'password', 'remember_token',
     ];
 
-//    public $incrementing = false;
+    public $incrementing = false;
 
     use SoftDeletes;
 }
